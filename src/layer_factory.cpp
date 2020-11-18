@@ -32,7 +32,6 @@
 #include "vk_dispatch_table_helper.h"
 #include "vk_layer_data.h"
 #include "vk_layer_extension_utils.h"
-#include "vk_layer_logging.h"
 #include "vk_extension_helper.h"
 #include "vk_layer_utils.h"
 
@@ -76,7 +75,7 @@ using std::unordered_map;
 static mutex_t global_lock;
 
 static const VkLayerProperties global_layer = {
-    "VK_LAYER_LUNARG_layer_factory", VK_LAYER_API_VERSION, 1, "LunarG Layer Factory Layer",
+    "VK_LAYER_object_tracker", VK_LAYER_API_VERSION, 1, "Object tracker test layer",
 };
 
 static const VkExtensionProperties instance_extensions[] = {{VK_EXT_DEBUG_REPORT_EXTENSION_NAME, VK_EXT_DEBUG_REPORT_SPEC_VERSION}};
