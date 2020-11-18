@@ -7,10 +7,12 @@ LAYER_INCLUDE := ../layer
 include $(CLEAR_VARS)
 LOCAL_MODULE := VkLayer_object_tracker
 LOCAL_SRC_FILES +=  $(SRC_DIR)/layer_factory.cpp \
+                    $(SRC_DIR)/object_tracker.cpp \
                     $(LAYER_INCLUDE)/vk_format_utils.cpp \
                     $(LAYER_INCLUDE)/vk_layer_config.cpp \
                     $(LAYER_INCLUDE)/vk_layer_extension_utils.cpp \
-                    $(LAYER_INCLUDE)/vk_layer_utils.cpp
+                    $(LAYER_INCLUDE)/vk_layer_utils.cpp \
+                    $(LAYER_INCLUDE)/xxhash.c
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/$(SRC_DIR) \
                     $(LOCAL_PATH)/$(LAYER_INCLUDE) \
                     $(VULKAN_INCLUDE)
